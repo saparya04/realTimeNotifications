@@ -1,1 +1,2 @@
-This is a realtime notifications app made using next.js,tailwind css and mongodb 
+<br>A real time notifications system for rental property page</br>
+
