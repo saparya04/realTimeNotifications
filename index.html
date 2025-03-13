@@ -5,16 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real-Time Notifications</title>
-  <!-- Add some CSS styling -->
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #e0f7fa; /* Light blue background */
+      background-color: #e0f7fa; 
       color: #333;
     }
     header {
-      background-color: #00796b; /* Teal */
+      background-color: #00796b;
       color: white;
       padding: 20px;
       text-align: center;
@@ -27,7 +26,7 @@
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      background-color: white; /* White background for content */
+      background-color: white; 
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -36,15 +35,15 @@
       padding: 0;
     }
     li {
-      background-color: #f1f8e9; /* Light green background for notifications */
+      background-color: #f1f8e9; 
       margin: 10px 0;
       padding: 10px;
       border-radius: 5px;
-      border: 1px solid #c5e1a5; /* Light green border */
+      border: 1px solid #c5e1a5; 
     }
     .notification-type {
       font-weight: bold;
-      color: #00796b; /* Teal text for type */
+      color: #00796b; 
     }
   </style>
 </head>
@@ -56,12 +55,9 @@
     <h2>Notification List</h2>
     <ul id="notifications"></ul>
   </div>
-  <!-- Socket.io script -->
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io();
-
-    // Listen for incoming notifications
     socket.on('notification', (data) => {
       const notificationList = document.getElementById('notifications');
       const listItem = document.createElement('li');
@@ -70,15 +66,8 @@
         ${data.message} <br>
         <small>${new Date(data.timestamp).toLocaleString()}</small>
       `;
-      notificationList.prepend(listItem); // Add the newest notification at the top
+      notificationList.prepend(listItem);
     });
-
-    // Emit a test notification (optional, remove for production)
-    //socket.emit('newNotification', {
-      //type: 'test',
-      //message: 'This is a test notification',
-      //timestamp: new Date(),
-    //});
   </script>
 </body>
 </html>
