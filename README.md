@@ -13,19 +13,19 @@ This is a **real-time notifications system** built using **Node.js, Express, Mon
 ## 📂 Project Structure
 ```
 project-root/
-│── public/          # Static files (HTML, CSS, JS)
+│── index.html          # Static files (HTML, CSS)
 │── .env            # Environment variables
-│── server.js       # Main server file
+│── seed.js       # for seeding the database with a sample data
 │── package.json    # Project dependencies
-│── tailwind.config.js # Tailwind CSS configuration
+│── app.js           # main file
 ```
 
 ## 🛠️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/yourusername/realtime-notifications.git
-cd realtime-notifications
+git clone https://github.com/saparya04/realTimeNotifications.git
+cd realTimeNotifications
 ```
 
 ### 2️⃣ Install Dependencies
@@ -57,7 +57,7 @@ npm start
 - When a new notification is sent, an **email alert** is triggered to the configured recipient email.
 
 ## 🖥️ Frontend Integration
-The frontend is served from the `public` directory. Modify `public/index.html` and `public/output.css` (generated from Tailwind CSS) for UI customization.
+The frontend is served from the `public` directory. Modify `public/index.html` for UI customization.
 
 ## 🤝 Contributing
 1. Fork the repository
