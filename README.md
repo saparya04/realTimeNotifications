@@ -1,53 +1,70 @@
-<<<<<<< HEAD
-<br>A real time notifications system for rental property page</br>
-=======
-# realtimenotifications
+# Real-Time Notifications System
 
-> one-liner description of the module
+This is a **real-time notifications system** built using **Node.js, Express, MongoDB, and Socket.io**, with email notifications powered by **Nodemailer**. The application allows users to send and receive real-time notifications via WebSockets, store them in a database, and send email alerts.
 
-background details relevant to understanding what this module does
+## 🚀 Features
+- Real-time notifications using **Socket.io**
+- Email alerts using **Nodemailer**
+- MongoDB for storing notifications
+- REST API for serving the frontend
+- CORS-enabled for flexibility
+- Uses **.env** file for configuration
 
-## Usage
-
-```js
-var realtimenotifications = require('realtimenotifications')
-
-console.log('hello warld')
+## 📂 Project Structure
+```
+project-root/
+│── public/          # Static files (HTML, CSS, JS)
+│── .env            # Environment variables
+│── server.js       # Main server file
+│── package.json    # Project dependencies
+│── tailwind.config.js # Tailwind CSS configuration
 ```
 
-outputs
+## 🛠️ Installation & Setup
 
-```
-hello warld
-```
-
-## API
-
-```js
-var realtimenotifications = require('realtimenotifications')
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/yourusername/realtime-notifications.git
+cd realtime-notifications
 ```
 
-See [api_formatting.md](api_formatting.md) for tips.
-
-## Install
-
-With [npm](https://npmjs.org/) installed, run
-
-```
-$ npm install realtimenotifications
+### 2️⃣ Install Dependencies
+```sh
+npm install
 ```
 
-## Acknowledgments
+### 3️⃣ Configure Environment Variables
+Create a `.env` file in the root directory and add the following:
+```
+PORT=3000
+MONGO_URI=mongodb://localhost:27017/realTimeNotifications
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-email-password
+RECIPIENT_EMAIL=recipient-email@gmail.com
+```
 
-realtimenotifications was inspired by..
+### 4️⃣ Start the Server
+```sh
+npm start
+```
 
-## See Also
+## 📡 WebSocket Events
+- `newNotification` - Send a new notification
+- `notification` - Broadcasts received notifications
+- `loadNotifications` - Sends previous notifications on connection
 
-- [`noffle/common-readme`](https://github.com/noffle/common-readme)
-- ...
+## 📧 Email Notifications
+- When a new notification is sent, an **email alert** is triggered to the configured recipient email.
 
-## License
+## 🖥️ Frontend Integration
+The frontend is served from the `public` directory. Modify `public/index.html` and `public/output.css` (generated from Tailwind CSS) for UI customization.
 
-ISC
->>>>>>> 0c02046 (Updated .gitignore and removed unwanted files)
+## 🤝 Contributing
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m 'Added feature X'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Create a Pull Request
+
+🌟 **Star this repo** if you found it useful! 🚀
 
